@@ -32,13 +32,6 @@ function st_add_theme_menu_item()
 
 add_action("admin_menu", "st_add_theme_menu_item");
 
-
-function st_display_url() {
-	?>
-	<div><a href="https://smashballoon.com/instagram-feed/token/" target="_blank">Click here for insta access token</a></div>
-  <?php
-}
-
 function st_display_key()
 {
 	?>
@@ -65,8 +58,6 @@ function st_display_row()
 function st_display_theme_panel_fields()
 {
 	add_settings_section("st_section", "ST Social Feed", null, "st_theme-options");
-
-	add_settings_field("", "", "display_url", "st_theme-options", "st_section");
 	
 	add_settings_field("st-key", "Enter access token", "st_display_key", "st_theme-options", "st_section");
 	add_settings_field("st-feed", "Enter number of feed", "st_display_feed", "st_theme-options", "st_section");
